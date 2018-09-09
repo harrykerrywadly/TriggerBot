@@ -157,8 +157,8 @@ if __name__ == '__main__':
     dp.add_handler(CommandHandler(['triggers', 'tr', 'trl'], trigger_list))
     dp.add_handler(CommandHandler(['trigger_delete', 'trigger_del', 'trd'], trigger_delete, pass_args=True))
 
-    dp.add_handler(CommandHandler(['trigger_cancel', 'tgc'], trigger_cancel))
-    dp.add_handler(CommandHandler(['trigger_add', 'tda'], trigger_add_step_1, pass_args=True))
+    dp.add_handler(CommandHandler(['trigger_cancel', 'trc'], trigger_cancel))
+    dp.add_handler(CommandHandler(['trigger_add', 'tra'], trigger_add_step_1, pass_args=True))
     dp.add_handler(MessageHandler(Filters.all, trigger_add_step_2), group=1)
 
     dp.add_error_handler(error)
