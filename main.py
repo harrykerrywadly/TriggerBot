@@ -35,7 +35,7 @@ def trigger_list(bot, update):
 
     text = 'List of triggers: \n'
     for trigger in triggers:
-        text += '"{}"; ID: {}\n'.format(trigger['response'], trigger['id'])
+        text += '"{}"; ID: {}\n'.format(trigger['request'], trigger['id'])
 
     update.message.reply_text(text)
 
