@@ -25,12 +25,12 @@ class Trigger(object):
         if self.id:
             db.query(
                 "UPDATE `triggers` SET `request` = %s, `response` = %s, `type` = %s, `enable` = %s WHERE `id` = %s",
-                (self.request, self.response, self.type, self.enable, self.id)
+                (self.request, self.response, str(self.type), self.enable, self.id)
             )
         else:
             db.query(
                 "INSERT INTO `triggers` (`request`, `response`, `type`) VALUES (%s, %s, %s)",
-                (self.request, self.response, self.type)
+                (self.request, self.response, str(self.type))
             )
 
             self.id = db.query(

@@ -17,13 +17,13 @@ def trigger_add_step_two(bot, update):
     _type = response = None
     attachment = update.message.effective_attachment
     if isinstance(attachment, telegram.Sticker):
-        _type = str(Type.STICKER)
+        _type = Type.STICKER
         response = update.message.sticker.file_id
     elif isinstance(attachment, list):
-        _type = str(Type.PHOTO)
+        _type = Type.PHOTO
         response = update.message.photo[0].file_id
     elif not attachment:
-        _type = str(Type.TEXT)
+        _type = Type.TEXT
         response = update.message.text
 
     if _type:
