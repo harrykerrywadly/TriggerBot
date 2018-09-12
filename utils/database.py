@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Capybara Copyright © 2018 Il'ya Marshal Semyonov
+# Pepkobot Copyright © 2018 Il'ya Marshal Semyonov
 # License: https://www.gnu.org/licenses/gpl-3.0.en.html
 import pymysql
 import logging
 
 from config import DB
+# from localConfig import DB
 
 
 class DataBase:
@@ -17,7 +18,7 @@ class DataBase:
         return connection
 
     @staticmethod
-    def query(query, args=None, fetch=False, list=False):
+    def query(query, args=None, fetch=False, as_list=False):
         connection = DataBase.get_connection()
         try:
             with connection.cursor() as cursor:
@@ -26,7 +27,7 @@ class DataBase:
                 if fetch:
                     result = cursor.fetchall()
 
-                    if list:
+                    if as_list:
                         return result
 
                     if len(result) == 1:

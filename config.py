@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Capybara Copyright © 2018 Il'ya Marshal Semyonov
+# Pepkobot Copyright © 2018 Il'ya Marshal Semyonov
 # License: https://www.gnu.org/licenses/gpl-3.0.en.html
 import os
 
