@@ -9,4 +9,4 @@ def trigger_add_cancel(bot, update):
     if Bot.addition_process.get(update.message.from_user.id) is not None:
         Bot.addition_process.pop(update.message.from_user.id)
 
-        update.message.reply_text('Создание отменено...')
+        update.message.reply_text('Creation canceled...')
