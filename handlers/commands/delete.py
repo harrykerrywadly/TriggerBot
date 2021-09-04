@@ -11,14 +11,14 @@ def trigger_delete(bot, update, args):
         return
 
     if not args:
-        update.message.reply_text("/trd <номер триггера>")
+        update.message.reply_text("/trd <trigger number>")
         return
 
     trigger = Trigger.get_by_id(args[0])
     if not trigger:
-        update.message.reply_text('Не могу найти триггер с номером {}'.format(args[0]))
+        update.message.reply_text('Cant find trigger with number {}'.format(args[0]))
     else:
         trigger.enable = False
         trigger.save()
 
-        update.message.reply_text('Триггер удалён')
+        update.message.reply_text('Trigger removed')
