@@ -33,6 +33,6 @@ def trigger_add_step_two(bot, update):
         new_trigger.save()
 
         Bot.addition_process.pop(update.message.from_user.id)
-        update.message.reply_text('Триггер успешно создан!')
+        update.message.reply_text('Trigger was successfully created!')
     else:
-        update.message.reply_text('Это нельзя использовать как ответ на триггер. Попробуйте еще раз:')
+        update.message.reply_text('This cannot be used as a response to a trigger. try again:')
