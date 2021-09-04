@@ -18,4 +18,4 @@ def trigger_add_step_one(bot, update, args):
 
     Bot.addition_process.update({update.message.from_user.id: Trigger(request=request)})
 
-    update.message.reply_text('/tdc - отмена создания\n\nОтправьте ответ на триггер:')
+    update.message.reply_text('/tdc - cancel creation \ n \ nSend response to trigger:')
