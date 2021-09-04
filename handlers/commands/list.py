@@ -10,7 +10,7 @@ def triggers_list(bot, update):
     if not is_valid(update, admin=True):
         return
 
-    text = 'Список существующих триггеров: \n'
+    text = 'List of existing triggers: \n'
     for enabled_trigger in Trigger.get_all_enabled():
         text += '{} - номер: {}\n'.format(enabled_trigger.request, enabled_trigger.id)
 
